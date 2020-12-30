@@ -22,6 +22,7 @@
         <module>spring-family-mybatis-demo</module>
         <module>spring-family-mybatis-generator-demo</module>
         <module>spring-family-mybatis-pagehelper-demo</module>
+        <module>spring-bucks</module>
     </modules>
     <packaging>pom</packaging>
 
