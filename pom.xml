@@ -24,6 +24,7 @@
         <module>spring-family-mybatis-pagehelper-demo</module>
         <module>spring-bucks</module>
         <module>spring-family-mongodb-demo</module>
+        <module>spring-family-mongodb-repository-demo</module>
     </modules>
     <packaging>pom</packaging>
 
