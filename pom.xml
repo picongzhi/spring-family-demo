@@ -25,6 +25,7 @@
         <module>spring-bucks</module>
         <module>spring-family-mongodb-demo</module>
         <module>spring-family-mongodb-repository-demo</module>
+        <module>spring-family-jedis-demo</module>
     </modules>
     <packaging>pom</packaging>
 
