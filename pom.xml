@@ -26,6 +26,7 @@
         <module>spring-family-mongodb-demo</module>
         <module>spring-family-mongodb-repository-demo</module>
         <module>spring-family-jedis-demo</module>
+        <module>spring-family-cache-demo</module>
     </modules>
     <packaging>pom</packaging>
 
