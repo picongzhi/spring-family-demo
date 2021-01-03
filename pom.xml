@@ -28,6 +28,8 @@
         <module>spring-family-jedis-demo</module>
         <module>spring-family-cache-demo</module>
         <module>spring-family-cache-redis-demo</module>
+        <module>spring-family-redis-demo</module>
+        <module>spring-family-redis-repository-demo</module>
     </modules>
     <packaging>pom</packaging>
 
