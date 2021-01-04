@@ -32,6 +32,7 @@
         <module>spring-family-redis-repository-demo</module>
         <module>spring-family-simple-reactor</module>
         <module>spring-family-reactive-redis-demo</module>
+        <module>spring-family-reactive-mongodb-demo</module>
     </modules>
     <packaging>pom</packaging>
 
