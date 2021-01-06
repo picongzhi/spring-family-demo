@@ -33,13 +33,15 @@
         <module>spring-family-simple-reactor</module>
         <module>spring-family-reactive-redis-demo</module>
         <module>spring-family-reactive-mongodb-demo</module>
+        <module>spring-family-simple-r2dbc-demo</module>
+        <module>spring-family-r2dbc-repository-demo</module>
     </modules>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
+        <version>2.3.4.RELEASE</version>
     </parent>
 
     <properties>
