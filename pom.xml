@@ -35,6 +35,8 @@
         <module>spring-family-reactive-mongodb-demo</module>
         <module>spring-family-simple-r2dbc-demo</module>
         <module>spring-family-r2dbc-repository-demo</module>
+        <module>spring-family-performance-aspect-demo</module>
+        <module>reactive-spring-bucks</module>
     </modules>
     <packaging>pom</packaging>
 
