@@ -38,6 +38,7 @@
         <module>spring-family-performance-aspect-demo</module>
         <module>reactive-spring-bucks</module>
         <module>spring-family-simple-controller-demo</module>
+        <module>spring-family-context-hierarchy-demo</module>
     </modules>
     <packaging>pom</packaging>
 
