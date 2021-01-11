@@ -37,6 +37,7 @@
         <module>spring-family-r2dbc-repository-demo</module>
         <module>spring-family-performance-aspect-demo</module>
         <module>reactive-spring-bucks</module>
+        <module>spring-family-simple-controller-demo</module>
     </modules>
     <packaging>pom</packaging>
 
