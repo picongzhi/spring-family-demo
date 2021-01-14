@@ -41,6 +41,7 @@
         <module>spring-family-context-hierarchy-demo</module>
         <module>spring-family-complex-controller-demo</module>
         <module>spring-family-json-view-demo</module>
+        <module>spring-family-thymeleaf-view-demo</module>
     </modules>
     <packaging>pom</packaging>
 
