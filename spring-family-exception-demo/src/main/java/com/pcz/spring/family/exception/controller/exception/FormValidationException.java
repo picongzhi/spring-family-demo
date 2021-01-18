@@ -1,0 +1,17 @@
+package com.pcz.spring.family.exception.controller.exception;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+/**
+ * @author picongzhi
+ */
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+@Getter
+@AllArgsConstructor
+public class FormValidationException extends RuntimeException {
+    private BindingResult result;
+}

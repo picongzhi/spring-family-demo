@@ -42,6 +42,7 @@
         <module>spring-family-complex-controller-demo</module>
         <module>spring-family-json-view-demo</module>
         <module>spring-family-thymeleaf-view-demo</module>
+        <module>spring-family-exception-demo</module>
     </modules>
     <packaging>pom</packaging>
 
