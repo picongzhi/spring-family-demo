@@ -2,29 +2,46 @@ package com.pcz.spring.bucks.service;
 
 import com.pcz.spring.bucks.model.Coffee;
 import com.pcz.spring.bucks.repository.CoffeeRepository;
-import lombok.extern.slf4j.Slf4j;
+import org.joda.money.Money;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.List;
 
 /**
  * @author picongzhi
  */
-@Slf4j
 @Service
+@CacheConfig(cacheNames = "CoffeeCache")
 public class CoffeeService {
     @Autowired
     private CoffeeRepository coffeeRepository;
 
-    public Optional<Coffee> findOneCoffee(String name) {
-        ExampleMatcher exampleMatcher = ExampleMatcher.matching()
-                .withMatcher("name", ExampleMatcher.GenericPropertyMatchers.exact().ignoreCase());
-        Optional<Coffee> optional = coffeeRepository.findOne(
-                Example.of(Coffee.builder().name(name).build(), exampleMatcher));
+    @Cacheable
+    public List<Coffee> getAllCoffees() {
+        return coffeeRepository.findAll(Sort.by("id"));
+    }
 
-        return optional;
+    public List<Coffee> getCoffeeByName(List<String> names) {
+        return coffeeRepository.findByNameInOrderById(names);
+    }
+
+    public Coffee getCoffee(String name) {
+        return coffeeRepository.findByName(name);
+    }
+
+    public Coffee getCoffee(Long id) {
+        return coffeeRepository.getOne(id);
+    }
+
+    public Coffee saveCoffee(String name, Money price) {
+        return coffeeRepository.save(
+                Coffee.builder()
+                        .name(name)
+                        .price(price)
+                        .build());
     }
 }

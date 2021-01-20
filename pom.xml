@@ -43,6 +43,7 @@
         <module>spring-family-json-view-demo</module>
         <module>spring-family-thymeleaf-view-demo</module>
         <module>spring-family-exception-demo</module>
+        <module>spring-family-simple-rest-template-demo</module>
     </modules>
     <packaging>pom</packaging>
 

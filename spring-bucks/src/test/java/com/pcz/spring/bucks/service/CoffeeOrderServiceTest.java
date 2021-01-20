@@ -20,18 +20,14 @@ public class CoffeeOrderServiceTest extends ApplicationTest {
 
     @Test
     public void createOrderTest() {
-        Optional<Coffee> optional = coffeeService.findOneCoffee("Latte");
-        Coffee coffee = optional.get();
-
+        Coffee coffee = coffeeService.getCoffee("Latte");
         CoffeeOrder coffeeOrder = coffeeOrderService.createOrder("Pcz", coffee);
         log.info("coffeeOrder: {}", coffeeOrder);
     }
 
     @Test
     public void updateStateTest() {
-        Optional<Coffee> optional = coffeeService.findOneCoffee("Latte");
-        Coffee coffee = optional.get();
-
+        Coffee coffee = coffeeService.getCoffee("Latte");
         CoffeeOrder coffeeOrder = coffeeOrderService.createOrder("Pcz", coffee);
         log.info("update init to paid: {}", coffeeOrderService.updateState(coffeeOrder, OrderState.PAID));
         log.info("update paid to init: {}", coffeeOrderService.updateState(coffeeOrder, OrderState.INIT));

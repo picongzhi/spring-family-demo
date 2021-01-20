@@ -27,7 +27,7 @@ public class CoffeeServiceTest extends ApplicationTest {
 
     @Test
     public void findOneTest() {
-        Optional<Coffee> optional = coffeeService.findOneCoffee("Latte");
-        optional.ifPresent(coffee -> log.info("coffee: {}", coffee));
+        Coffee coffee = coffeeService.getCoffee("Latte");
+        log.info("coffee: {}", coffee);
     }
 }

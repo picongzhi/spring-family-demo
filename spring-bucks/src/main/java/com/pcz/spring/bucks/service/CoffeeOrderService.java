@@ -26,12 +26,15 @@ public class CoffeeOrderService {
                 .state(OrderState.INIT)
                 .build();
 
-        return coffeeOrderRepository.save(coffeeOrder);
+        CoffeeOrder saved = coffeeOrderRepository.save(coffeeOrder);
+        log.info("Saved order: {}", saved);
+
+        return saved;
     }
 
     public boolean updateState(CoffeeOrder coffeeOrder, OrderState state) {
         if (state.compareTo(coffeeOrder.getState()) <= 0) {
-            log.warn("Wrong state order: {}, {}", state, coffeeOrder.getState());
+            log.warn("Wrong state order: {} -> {}", state, coffeeOrder.getState());
             return false;
         }
 
@@ -39,5 +42,9 @@ public class CoffeeOrderService {
         coffeeOrderRepository.save(coffeeOrder);
 
         return true;
+    }
+
+    public CoffeeOrder get(Long id) {
+        return coffeeOrderRepository.getOne(id);
     }
 }
