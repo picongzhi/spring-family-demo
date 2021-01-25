@@ -46,6 +46,7 @@
         <module>spring-family-simple-rest-template-demo</module>
         <module>spring-family-complex-rest-template-demo</module>
         <module>spring-family-advanced-rest-template-demo</module>
+        <module>spring-family-hateoas-server-demo</module>
     </modules>
     <packaging>pom</packaging>
 
