@@ -49,6 +49,7 @@
         <module>spring-family-hateoas-server-demo</module>
         <module>spring-family-hateoas-client-demo</module>
         <module>spring-family-session-demo</module>
+        <module>spring-family-webflux-demo</module>
     </modules>
     <packaging>pom</packaging>
 
